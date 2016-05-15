@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+window.onload = myMain;
+var size = 5;
+
+function myMain() { 
+para1 = document.getElementById("p1");
+para2 = document.getElementById("p2");
+buton = document.getElementById("b1");
+para1.onmouseover = function(){para2.style.color = "magenta";};
+para2.addEventListener("mouseover",function(){ para1.style.fontSize=size+"em";
+size= size+1; });
+}
+ 
+
+function f1(){
+rez = prompt("Introduceti numarul unui paragraf, urmat de un cuvant:","1 first");
+parray = document.getElementsByTagName("p");
+para = parray[parseInt(rez)-1];
+text = para.textContent;
+nraparitii = 0;
+text.inexOf("",);
+alert(nraparitii);
+}
+
+</script>
+
+        <p id="p1">first paragraph</p>
+        <p id="p2">second pararaph</p>
+        <input type="button" id="b1" value="click me" onclick="f1()">
+
+</body>
+</html>
